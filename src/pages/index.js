@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Prem Kumar</title>
+        <title>Manoj Kumar</title>
       </Head>
       <NavBar />
       <div className="grid grid-cols-1 md:grid-cols-2 h-[92vh] items-center flex-col md:flex-row mt-10 justify-between  w-full">
@@ -22,7 +22,7 @@ export default function Home() {
           <h1 className="scroll-m-20 text-3xl md:text-4xl md:max-w-[500px] md:leading-loose font-extrabold tracking-widest md:tracking-tight lg:text-7xl">
             Welcome to{" "}
             <span className="font-extrabold block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-red-600">
-              {` Prem Kumar's`}
+              {` Manoj Kumar's`}
             </span>{" "}
             Portfolio
           </h1>

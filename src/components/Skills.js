@@ -29,7 +29,7 @@ const Skills = () => {
     BabelIcon,
     GithubIcon,
     JestIcon,
-    LinuxIcon,
+
     MUIIcon,
     NextJsIcon,
     VsCodeIcon,

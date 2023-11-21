@@ -1,59 +1,18 @@
 export const projectsList = [
   {
     id: 1,
-    link: "https://online.licmf.com/",
-    img: "/lic.png",
-    title: "LIC Mutual Fund ",
+    link: "https://thriving-druid-986036.netlify.app/",
+    img: "/carrent.png",
+    title: "Auction Journal",
     description:
-      "Led the migration of the LIC mutual fund web app from .NET to Node.js and React.js. Integrated new features, encryption, cookies, and session maintenance while improving overall functionality and performance.",
+      "Created Complete Auction Journal Website Using React JS and Node JS Integrated Material-UI  components, including Dialogues, Table Pagination, Styled components, Accordion, Snackbar notifications, and more, to create a cohesive and visually appealing user interface, enhancing user interaction and experience in the Auction Journal project ",
   },
   {
     id: 2,
-    link: "https://treatmenttraveller.vercel.app/",
-    img: "/tt.png",
-    title: "Treatment Traveller",
+    link: "https://kreo.in/",
+    img: "/jobit.png",
+    title: "KREO",
     description:
-      "Created a comprehensive website using Next.js, Material UI, and REST APIs. This platform enables users to find the right treatment and hospital based on their preferences and location.",
-  },
-  {
-    id: 3,
-    link: "https://hosplan.com/",
-    img: "/hosplan.png",
-    title: "Hosplan",
-    description:
-      "Fixed design changes and bugs for this React.js and Ant Design-based website. Enhanced user experience by providing easy access to the UI and incredible features for informed healthcare decisions.",
-  },
-  {
-    id: 4,
-    link: "https://www.gettruepower.in/",
-    img: "/enercent.png",
-    title: "True Power by Jio Things",
-    description:
-      "Contributed to the development and implementation of a centralized website and platform for improving the efficiency, transparency, and collaboration of production processes. This involved data management and real-time monitoring capabilities.",
-  },
-  {
-    id: 5,
-    link: "https://sweepbee-llwu.vercel.app/",
-    img: "/sweepbee.png",
-    title: "Sweepstake.mobi",
-  },
-  {
-    id: 6,
-    link: "https://voh.vercel.app/",
-    img: "/voh.png",
-    title: "Voice of healthcare",
-    description: "",
-  },
-  {
-    id: 7,
-    link: "https://metoospace.vercel.app/",
-    img: "/metoospace.png",
-    title: "metooSpace",
-  },
-  {
-    id: 8,
-    link: "https://kanban-hazel.vercel.app/",
-    img: "/kanban.png",
-    title: "Kanabn clone",
+      "Developed a dynamic web application using Next.js and React , ensuring cutting-edge features and optimal performance.  Maintained comprehensive documentation and adhered to ESLint and Next.js-specific configurations to ensure code quality and facilitate collaborative development.",
   },
 ];

@@ -14,7 +14,7 @@ const Experience = () => {
   return (
     <div
       id="experience"
-      className="md:min-h-screen w-full py-5 from-zinc-600 to-rose-800  px-10 bg-gradient-to-br dark:from-sky-300 dark:to-rose-400"
+      className="md:min-h-screen  w-full py-5 from-zinc-600 to-rose-800  px-10 bg-gradient-to-br dark:from-sky-300 dark:to-rose-400"
     >
       <h1
         className="scroll-m-20 pt-5 text-3xl
@@ -35,16 +35,10 @@ const Experience = () => {
 
                 <Card className="flex justify-between items-center  p-4">
                   <CardDescription>{companyName}</CardDescription>
-                  <Image
-                    alt={companyName}
-                    src={logo}
-                    width={100}
-                    height={100}
-                  />
                 </Card>
               </CardHeader>
               <CardContent className="">
-                <div className="flex gap-2 items-center">
+                <div className="flex gap-2  items-center">
                   <MapPin className="opacity-30" />
                   <p className="text-sm text-muted-foreground">{location}</p>
                 </div>
