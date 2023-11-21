@@ -10,13 +10,42 @@ import { useToast } from "./ui/use-toast";
 import { Toaster } from "./ui/toaster";
 
 const Contact = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
+  // const [name, setName] = useState("");
+  // const [email, setEmail] = useState("");
+  // const [message, setMessage] = useState("");
+  const [formData, setFormData] = useState({});
   const [isLoading, setisLoadin] = useState(false);
+  const [isError, setisError] = useState(false);
   const { toast } = useToast();
+
+  const handevalidate = (formData) => {
+    let error = {};
+    if (!formData?.name) {
+      error.error = true;
+      error.name = "Please enter a name";
+    }
+    if (!formData?.email) {
+      error.error = true;
+      error.email = "Please enter a email";
+    }
+    if (!formData?.message) {
+      error.error = true;
+      error.message = "Please enter a message";
+    }
+    return error;
+  };
+  const handleDatChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    const error = handevalidate(formData);
+    setisError(error);
+    if (error.error) {
+      return;
+    }
     setisLoadin(true);
     // Perform form validation
 
@@ -34,13 +63,11 @@ const Contact = () => {
         toast({
           title: "Message Sent",
           description: "Thank you for contacting Me!",
-          variant: "default",
         });
       } else {
         toast({
           title: "Error",
           description: "Failed to send the message. Please try again later.",
-          variant: "destructive",
         });
       }
     } catch (error) {
@@ -52,9 +79,7 @@ const Contact = () => {
       });
     }
 
-    setName("");
-    setEmail("");
-    setMessage("");
+    setFormData({});
     setisLoadin(false);
   };
   return (
@@ -74,26 +99,31 @@ const Contact = () => {
         </h1>
         <form className="h-full p-5 flex flex-col gap-5 md:p-10  w-full md:w-3/4 lg:w-1/2 mx-auto">
           <Input
-            value={name}
-            onChange={(e) => setName(e.target.value)}
+            value={formData.name}
+            onChange={handleDatChange}
             type="text"
             name="name"
             placeholder="Enter Your Name"
           />
+          <p className="text-red-600"> {isError?.name} </p>
           <Input
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            onChange={handleDatChange}
             type="email"
             name="email"
+            value={formData.email}
             placeholder=" Enter Your Email"
           />
+          <p className="text-red-600"> {isError?.email} </p>
+
           <Textarea
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
+            value={formData.message}
+            onChange={handleDatChange}
             className="h-[200px]"
             name="message"
             placeholder="Type your message here."
           />
+          <p className="text-red-600"> {isError?.message} </p>
+
           <Button
             onClick={handleSubmit}
             className="bg-green-500"
