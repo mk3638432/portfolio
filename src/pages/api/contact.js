@@ -8,7 +8,7 @@ export default async function handler(req, res) {
     const transporter = nodemailer.createTransport({
       service: "Gmail",
       auth: {
-        user: "premenaga@gmail.com",
+        user: "mk3638432@gmail.com",
         pass: "evnrfbsucxwgvrus",
       },
     });
@@ -16,7 +16,7 @@ export default async function handler(req, res) {
     // Create the email content
     const mailOptions = {
       from: `<${email}>`,
-      to: "premenaga@gmail.com",
+      to: "mk3638432@gmail.com",
       subject: "New Contact Form Submission From Portfolio",
       text: `
         Name: ${name}
