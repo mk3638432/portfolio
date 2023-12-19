@@ -3,7 +3,7 @@ import nodemailer from "nodemailer";
 export default async function handler(req, res) {
   if (req.method === "POST") {
     const { name, email, message } = req.body;
-
+    console.log(name, email, message);
     // Configure the email transport
     const transporter = nodemailer.createTransport({
       service: "Gmail",
@@ -13,33 +13,33 @@ export default async function handler(req, res) {
       },
     });
 
-    // Create the email content
     const mailOptions = {
       from: `<${email}>`,
       to: "mk3638432@gmail.com",
       subject: "New Contact Form Submission From Portfolio",
-      text: `
-        Name: ${name}
-        Email: ${email}
-        Message: ${message}
-      `,
+      text: "Hello world?", // plain text body,
     };
+    console.log("Message sent: %s", mailOptions.messageId);
+    console.log(mailOptions);
 
     try {
-      // Send the email
-      await transporter.sendMail(mailOptions);
+      const result = await transporter.sendMail(mailOptions);
+      console.log(result);
 
-      // Email sent successfully
-      res.status(200).json({ message: "Email sent successfully!" });
+      // Log success
+      console.log("Email sent successfully!");
+
+      // Respond with a more detailed success message
+      res
+        .status(200)
+        .json({ success: true, message: "Email sent successfully!" });
     } catch (error) {
-      // Log the error message
       console.error("Error sending email:", error);
 
-      // Failed to send email
-      res.status(500).json({ error: "Failed to send email." });
+      // Respond with a more detailed error message
+      res.status(500).json({ success: false, error: "Failed to send email." });
     }
   } else {
-    // Invalid request method
-    res.status(405).json({ error: "Method not allowed." });
+    res.status(405).json({ success: false, error: "Method not allowed." });
   }
 }

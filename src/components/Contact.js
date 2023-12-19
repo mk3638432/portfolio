@@ -47,17 +47,20 @@ const Contact = () => {
       return;
     }
     setisLoadin(true);
-    // Perform form validation
 
-    // Create an API request to your backend endpoint to send the email
     try {
       const response = await fetch("/api/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ name, email, message }),
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+        }),
       });
+      console.log(response);
 
       if (response.ok) {
         toast({
@@ -71,6 +74,7 @@ const Contact = () => {
         });
       }
     } catch (error) {
+      console.log(error);
       toast({
         title: "Error",
         description:
