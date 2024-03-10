@@ -17,6 +17,14 @@ export const projectsList = [
   },
   {
     id: 3,
+    link: "https://hosplan.com/",
+    img: "/hosplan.png",
+    title: "Hosplan",
+    description:
+      "Fixed design changes and bugs for this React.js and Ant Design-based website. Enhanced user experience by providing easy access to the UI and incredible features for informed healthcare decisions.",
+  },
+  {
+    id: 3,
     link: "https://evently-ge233kmzp-mk3638432.vercel.app/",
     img: "/evently.png",
     title: "Evently",
