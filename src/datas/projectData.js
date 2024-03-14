@@ -15,14 +15,7 @@ export const projectsList = [
     description:
       "Developed a dynamic web application using Next.js and React , ensuring cutting-edge features and optimal performance.  Maintained comprehensive documentation and adhered to ESLint and Next.js-specific configurations to ensure code quality and facilitate collaborative development.",
   },
-  {
-    id: 3,
-    link: "https://hosplan.com/",
-    img: "/hosplan.png",
-    title: "Hosplan",
-    description:
-      "Fixed design changes and bugs for this React.js and Ant Design-based website. Enhanced user experience by providing easy access to the UI and incredible features for informed healthcare decisions.",
-  },
+
   {
     id: 3,
     link: "https://evently-ge233kmzp-mk3638432.vercel.app/",
