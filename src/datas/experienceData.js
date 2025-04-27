@@ -2,7 +2,7 @@ export const experienceList = [
   {
     id: 1,
     companyName: "Avija Digital ",
-    period: "Feb 2023 - Mar 2025 · 2 yr 2 mos",
+    period: "Feb 2023 - Apr 2025 · 2 yr 3 mos",
     position: "Frontend Web Developer",
     location: "Delhi, India",
     skills: [
