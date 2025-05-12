@@ -2,7 +2,7 @@ export const experienceList = [
   {
     id: 1,
     companyName: "Avija Digital ",
-    period: "Feb 2023 - Apr 2025 · 2 yr 3 mos",
+    period: "Nov 2023 - May 2025 · 1 yr 7 mos",
     position: "Frontend Web Developer",
     location: "Delhi, India",
     skills: [
@@ -28,7 +28,7 @@ export const experienceList = [
   {
     id: 2,
     companyName: "ICETEA MEDIA ",
-    period: "Apr 2021 - Feb 2023 : 1 yr 11 mos ",
+    period: "Nov 2022 - Oct 2023 : 1 yr 0 mos ",
     position: "Frontend Web Developer",
     location: "HSR Layout, Bangalore, India",
     skills: [
